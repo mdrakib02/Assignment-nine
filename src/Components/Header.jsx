@@ -1,6 +1,7 @@
-import {  House, TreePalm, TreePine, UserPen } from "lucide-react";
+import {  House, LogIn, TreePalm, TreePine, UserPen } from "lucide-react";
 import { Link, NavLink } from "react-router";
 import  logoImg from "../assets/leaves-icon.svg"
+import Mylink from "./Mylink";
 export default function Header() {
   return (
     <div className="container mx-auto">
@@ -15,20 +16,20 @@ export default function Header() {
           <ul className="text-base font-semibold flex items-center gap-x-4">
             <li className="flex items-center gap-x-2 btn btn-sm coursor-pointer">
               <House size={18} />
-              <NavLink> Home</NavLink>
+              <Mylink to="/">Home</Mylink>
             </li>
             <li className="flex items-center gap-x-2 btn-sm btn coursor-pointer">
               <TreePine size={18} />
-              <NavLink>Plants</NavLink>
+              <NavLink to="/plants">Plants</NavLink>
             </li>
             <li className="flex items-center gap-x-2 coursor-pointer btn btn-sm ">
               <UserPen size={18} />
-              <NavLink>My Profile</NavLink>
+              <NavLink to="/profile">My Profile</NavLink>
             </li>
           </ul> 
-          <button className=" btn bg-green-600 text-white hover:bg-green-700 border-0 btn-md flex items-center gap-x-2">
-            Buy Tree <TreePalm className="" />
-          </button>
+          <NavLink to="/login" className=" btn bg-green-600 text-white hover:bg-green-700 border-0 btn-md flex items-center gap-x-2">
+            Login <LogIn />
+          </NavLink>
         </section>
       </nav>
     </div>
