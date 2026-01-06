@@ -4,6 +4,7 @@ import Plants from "../Pages/Plants";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import MyProfile from "../Pages/MyProfile";
+import Signup from "../Pages/Signup";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "*", element: <div>404 Not Found</div> },
       { path: "/profile", Component: MyProfile },
       { path: "/login", Component: Login },
+      { path: "/signup", Component: Signup },
 
 
     ]

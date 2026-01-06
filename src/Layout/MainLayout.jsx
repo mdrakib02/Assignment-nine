@@ -5,9 +5,11 @@ import Footer from "../Components/Footer";
 
 export default function MainLayout() {
   return (
-    <div className="container mx-auto">
+    <div className="">
       <Header />
-      <Outlet/>
+     <div className="min-h-screen">
+      <Outlet />
+     </div>
       <Footer/>
     </div>
   );

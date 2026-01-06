@@ -1,6 +1,15 @@
-import React from 'react'
+import { Eye, EyeClosed, EyeOff } from 'lucide-react'
+import React, { useState } from 'react'
+import { Link } from 'react-router'
 
 export default function Login() {
+
+    const [showbtn, setShowbtn] = useState(!true);
+    
+    const handleShowPassword = () => {
+        setShowbtn(!showbtn);
+    }
+
     return (
         <div className="hero  min-h-screen">
             <div className="hero-content">
@@ -14,10 +23,14 @@ export default function Login() {
                             <label className="label">Email</label>
                             <input type="email" className="input" placeholder="Email" />
                             <label className="label">Password</label>
-                            <input type="password" className="input" placeholder="Password" />
-                            <div><a className="link link-hover">Forgot password?</a></div>
+                            <input type={showbtn? "text": "password"} className="input" placeholder="Password" />
+                            <div className='relative'><a className="link link-hover">Forgot password?</a>
+                                <Link onClick={() => handleShowPassword(showbtn)}> {showbtn ? <Eye size={18} className='absolute right-8 -top-9 cursor-pointer' /> : <EyeOff size={18} className='absolute right-8 -top-9 cursor-pointer' />}</Link>
+                            </div>
                             <button className="btn btn-neutral mt-4">Login</button>
+                            <Link to="/signup">If you haven't account please <span className='text-blue-500'>Signup</span></Link>
                         </fieldset>
+
                     </div>
                 </div>
             </div>
