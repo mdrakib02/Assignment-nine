@@ -80,7 +80,7 @@ export default function Header() {
     ${openbtn ? "opacity-100 translate-y-6 top-14" : "opacity-0 -translate-y-6 pointer-events-none -top-40"}
   `}
           >
-            <div className=" p-4 rounded-md shadow-md w-full">
+            <div className=" bg-white p-4 rounded-md shadow-md w-full">
               <ul className="text-base font-semibold flex flex-col gap-y-4 ">
                 <li className="flex items-center gap-x-2 btn btn-sm cursor-pointer justify-start">
                   <House size={18} />
