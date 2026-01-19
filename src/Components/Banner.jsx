@@ -7,8 +7,8 @@ import { ArrowRightToLine } from "lucide-react";
 export default function Banner() {
   return (
     <div>
-      <section className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-10 gap-6 container mx-auto py-10 px-4">
-        <div className="col-span-3">
+      <section className="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-10 gap-6 py-10">
+        <div className="col-span-5 lg:col-span-3">
           <div className="bg-black rounded-2xl flex items-center flex-col p-6 mt-6">
             <div className="flex items-center-safe gap-x-2 "><img className="w-8" src={verifiedimg} alt="" /> <h3 className="text-2xl font-bold text-white text-center"> 100%</h3>
             </div>
@@ -22,12 +22,12 @@ export default function Banner() {
           </div>
         </div>
         {/* Banner Images */}
-        <div className="col-span-4">
+        <div className="col-span-5 lg:col-span-3">
           <img className="rounded-2xl w-[370px] mx-auto" src={Bannerimg} alt="" />
         </div>
 
         {/* second banner sections */}
-        <div className="col-span-3">
+        <div className="col-span-5 lg:col-span-3">
          <div className="flex flex-col items-start gap-y-2 bg-emerald-600 rounded-2xl p-6 mt-6 text-white">
           <h3 className="text-3xl font-bold">70%</h3>
           <p className="mt-8 mb-3">People were convironed and pressur their plant with the help of our guides and products</p>
